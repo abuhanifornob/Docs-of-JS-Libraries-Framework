@@ -2488,7 +2488,7 @@ ii. Trying to access block-scoped variables outside of their scopes.
 </summary>
 <br >
   
- ```css
+ ```js
 //Basic knowledge
 1. how does internet work?
 
