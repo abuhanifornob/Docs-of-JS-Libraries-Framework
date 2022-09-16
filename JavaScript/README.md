@@ -34,6 +34,7 @@ List of JavaScript:
 - [Object](#Object)
 - [switch](#switch)
 - [localStorage](#localStorage)
+- [Regular Expression](#RegularExpression)
 - [Output](#Output)
 - [jsProblemQuestions](#jsProblemQuestions)
 - [jsProblemSolved](#jsProblemSolved)
@@ -1713,6 +1714,32 @@ export {
 
 ```
 </details>
+
+### RegularExpression
+<details>
+  <summary>
+  <h3>Regualr Expression (Click Me)</h3>
+   </summary>
+  <br>
+  ````js
+  
+  //এগুলোর ব্যবহারের উপর ভিত্তি করে Brackets, Metacharacterও Quantifierনামে বিভক্ত করা যায়
+ //.................... Breaktes...............
+ const bText = 'A Normal Text';
+ bText.match(/[aox]/);     //কেস সেন্সিটিভ তাই প্রথমটা ম্যাচ করেনি
+ কিন্তু গ্লোবাল মডিফায়ার gব্যবহার করলে এটা সবগুলো ম্যাচই দেখাবেঃ
+ bText.match(/[aox]/g);
+ 
+ [^abc]— এটা ঠিক উল্টো, এর দ্বারা বুঝানো হয় যে আমরা aঅথবা bঅথবা cছাড়া যেকোনো একটা ক্যারেক্টার ম্যাচ করাতে চাচ্ছিঃ
+ bText.match(/[^abc]/);
+ 
+ [0–9]বা [a-z]— [0–9]মানে হচ্ছে 0থেকে 9এর মধ্যে কোনো নাম্বার থাকলেই ম্যাচ করবে, ঠিক বাকীগুলোই এরকম [a-z]মানে হচ্ছে aথেকে zএরমধ্যে কোনো ক্যারেক্টার থাকলেই সেটা ম্যাচ করবেঃ
+ 
+ bText.match(/[a-z]/g);
+  
+  ````
+ 
+</details
 
 ### jsProblemSolved
 
