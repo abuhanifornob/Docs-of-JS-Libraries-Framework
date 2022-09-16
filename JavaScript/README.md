@@ -1818,11 +1818,11 @@ const mText = 'ABCDEFGHIJK abcdefghijk\n\t01234567890!@#$%^&()';
 //তবে এখানে আমাদের gফ্ল্যাগ লাগবে না, এটা ম্যাচ পেলেই সেখানে স্প্লিট করে ফেলবেঃ
 	('abcdeabf').split(/b/)
 
-	
   
   ```
  
-	</details>
+</details>
+	
 
 ### jsProblemSolved
 
@@ -2716,17 +2716,15 @@ ii. Hoisting is javaScript default behavior of moving all declarations to the to
 	
 	
 	
-	
-	
-	
-	
-	
+		
 	
 	
 	
   
  ```
 </details>
+	
+	
 ### snippetsForJavascript
 <details>
 <summary>
