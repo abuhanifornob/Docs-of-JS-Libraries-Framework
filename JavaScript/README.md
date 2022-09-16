@@ -2711,14 +2711,16 @@ ii. Hoisting is javaScript default behavior of moving all declarations to the to
 68. How to use the javaScript callback function?
 69. Explain closure in JavaScript?
 70. Explain passed by value and passed by reference?
-	
-	
-	
-	
-	
-		
-	
-	
+71. What is call Stack
+72. Tel us about try-catsh
+73. Name Some console API's
+74. What is Syntax Error
+75. When do we get Reference error
+76. a. What is Worng with the code below.
+	var foo;
+	console.log(foo.bar);
+   b.What type of error will the code generate
+   c. What is the correct wat to write the code
 	
   
  ```
