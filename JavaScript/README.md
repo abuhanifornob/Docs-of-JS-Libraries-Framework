@@ -1721,7 +1721,7 @@ export {
   <h3>Regualr Expression (Click Me)</h3>
    </summary>
   <br>
-  ````js
+  ```js
   
   //এগুলোর ব্যবহারের উপর ভিত্তি করে Brackets, Metacharacterও Quantifierনামে বিভক্ত করা যায়
  //.................... Breaktes...............
@@ -1737,7 +1737,7 @@ export {
  
  bText.match(/[a-z]/g);
   
-  ````
+  ```
  
 </details
 
