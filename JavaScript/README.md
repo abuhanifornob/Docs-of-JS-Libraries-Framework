@@ -1721,6 +1721,7 @@ export {
   <h3>Regualr Expression (Click Me)</h3>
    </summary>
   <br>
+	
   ```js
   
   //এগুলোর ব্যবহারের উপর ভিত্তি করে Brackets, Metacharacterও Quantifierনামে বিভক্ত করা যায়
@@ -1739,7 +1740,7 @@ export {
   
   ```
  
-</details
+	</details>
 
 ### jsProblemSolved
 
