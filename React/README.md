@@ -71,6 +71,17 @@ const converCountryDataToHtmlData = country => {
 }
 
 loadCountries();
+ //
+ /* ........ benefits of What is Single Page Application (SPA)
+         1.Quick Loading Time
+         2.Seamless User Experience
+         3.Ease in Building Feature-rich Apps
+         4.Uses Less Bandwidth
+   .....    disadvantages................
+         1. Doesn’t Perform Well With SEO
+         2.Uses a Lot of Browser Resources
+         3. Security Issues
+         */
   
   
   
