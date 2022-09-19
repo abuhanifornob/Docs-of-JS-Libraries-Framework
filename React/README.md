@@ -59,13 +59,18 @@ const displayCountries = (countries) => {
 
 }
 
-const converCountryDataToHtmlData = country => {
+const converCountryDataToHtmlData = country => {    // parametars Destructure ({name,flags}).
+      const {name,flags}=country;   // Explore destructuring and send data to html elements using props(Object Propertis Mens Props)
     return `
        <div class="coun">
-
-       <h3>${country.name.common}</h3>
-       <img src="${country.flags.png}"
-
+       
+// orginal Object chaine
+<!--        <h3>${country.name.common}</h3>
+       <img src="${country.flags.png}"> -->
+ //...................... Use Destucturing ....
+         <h3>${name.common}</h3>
+       <img src="${flags.png}">
+        
        </div>
     `
 }
@@ -82,6 +87,7 @@ loadCountries();
          2.Uses a Lot of Browser Resources
          3. Security Issues
          */
+
   
   
   
