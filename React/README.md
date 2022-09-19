@@ -41,6 +41,36 @@ List of React:
     // 2.Container Component
     // 3. No Pattren But breakdown for working purpose
     // 4.Stated Alone Component
+ // ......API To HTML Convert..........................
+const loadCountries = () => {
+    fetch('https://restcountries.com/v3.1/all')
+        .then(response => response.json())
+        .then(data => displayCountries(data));
+}
+
+const displayCountries = (countries) => {
+
+    const countriesHTML = countries.map(country => converCountryDataToHtmlData(country));
+    const container = document.getElementById('countriesID');
+    console.log(container);
+    console.log(countriesHTML);
+    container.innerHTML = countriesHTML.join(" ");
+
+
+}
+
+const converCountryDataToHtmlData = country => {
+    return `
+       <div class="coun">
+
+       <h3>${country.name.common}</h3>
+       <img src="${country.flags.png}"
+
+       </div>
+    `
+}
+
+loadCountries();
   
   
   
