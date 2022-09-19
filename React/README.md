@@ -37,7 +37,7 @@ List of React:
   //................... Module 42.............................
   // Main 4 Concept ------1.Component 2.Templete 3.State 4. Routing.
   //.... We get Componet Identyfy 4 Way..
-    //1.Similar in Loop Differnce in data
+    //1.Similar in Look Differnce in data
     // 2.Container Component
     // 3. No Pattren But breakdown for working purpose
     // 4.Stated Alone Component
