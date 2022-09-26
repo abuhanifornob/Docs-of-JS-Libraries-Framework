@@ -87,7 +87,113 @@ loadCountries();
          2.Uses a Lot of Browser Resources
          3. Security Issues
          */
+//..........................Module 47.....................................................
+import React, { useEffect, useState } from 'react';
+import { addCardLocatStorage, removeCardLocatStorage } from '../../utilities/addCardLocalStorage';
+import { getTotal } from '../../utilities/calculation';
+import './Products.css'
 
+const Products = () => {
+    
+    const [products,setProducts]=useState([]);  // useState Setup
+    useEffect(()=>{  //     Date Face 
+        fetch('products.json')
+        .then(res=>res.json())
+        .then(data=>setProducts(data))
+    },[]);
+
+    // Object Sumition.....
+     const totalPrice=getTotal(products);
+   
+    return (
+        <div className='products'>
+            <h1>This is products Blog</h1>
+            <p>Total Price is: {totalPrice}</p>
+            {
+                products.map(product=><DisplayProduct products={product} key={product.id}></DisplayProduct>)
+            }
+        </div>
+    );
+};
+
+const DisplayProduct=(props)=>{
+    const{name,price,id}=props.products;
+    const addCard=(id)=>{
+        addCardLocatStorage(id);
+    }
+    const removeCard=(id)=>{
+           removeCardLocatStorage(id);
+    }
+
+   
+    return (
+        <div className='products'>
+            <h2>Product Name:{name}</h2>
+            <h3>Product Price:$ {price}</h3>
+            <p><small>Product id:{id} </small></p>
+            {/* ................. Function Aall With parametter................ */}
+            <button onClick={()=>addCard(id)}>Add Card</button>  
+            <button onClick={()=>removeCard(id)}> Remove Card</button>
+        </div>
+    )
+}
+
+
+export default Products;
+
+// ...................................... utility Section................................
+// lolcat Storage Date Store and Remove.......................
+const addCardLocatStorage = (id) => {
+
+        let shoppingCart = {};
+        const storedCard = localStorage.getItem('shopping-cart');
+        if (storedCard) {
+            shoppingCart = JSON.parse(storedCard);
+        }
+
+        const quantity = shoppingCart[id];
+        if (quantity) {
+            const newQuantity = quantity + 1;
+            shoppingCart[id] = newQuantity;
+
+        } else {
+            shoppingCart[id] = 1;
+        }
+        localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
+
+
+    }
+    // Remove  Card Item form Local Storage....
+const removeCardLocatStorage = (id) => {
+
+    const storedCard = localStorage.getItem('shopping-cart');
+    if (storedCard) {
+        const storedCartParse = JSON.parse(storedCard);
+        console.log(storedCartParse);
+        if (id in storedCartParse) {
+            delete storedCartParse[id];
+            console.log(storedCartParse)
+            localStorage.setItem('shopping-cart', JSON.stringify(storedCartParse));
+        }
+    }
+}
+
+export { addCardLocatStorage, removeCardLocatStorage }
+//............................Reduce Method..................................
+// const testArray = [50, 100, 50, 100, 30];
+// const reduceSum = (previus, current) => previus + current;
+// const getToal = testArray.reduce(reduceSum, 0)
+// console.log(getToal);
+
+
+
+const getProductsSum = (products) => {
+    const reduseSum = (previus, current) => (previus + current.price);
+    const productSum = products.reduce(reduseSum, 0);
+    return productSum;
+}
+
+export { getProductsSum as getTotal };
   
   
   
